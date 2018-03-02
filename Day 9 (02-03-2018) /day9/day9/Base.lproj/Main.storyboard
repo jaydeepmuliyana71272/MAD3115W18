@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tp3-Q7-5aW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video-->
+        <scene sceneID="vXm-BA-K4s">
+            <objects>
+                <viewController id="5bQ-bP-3PH" customClass="VideoVC" customModule="day9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0lL-Rl-Sgu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m83-6X-Vea">
+                                <rect key="frame" x="122" y="431" width="131" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btnVideo:" destination="5bQ-bP-3PH" eventType="touchUpInside" id="bOH-8J-zkh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.32665834151807732" green="0.4667260362694301" blue="0.32127506528641947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="exX-ri-8C4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="Video.png" id="6KV-B1-o5T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2B-pO-wQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.39999999999998" y="53.523238380809602"/>
+        </scene>
+        <!--Book-->
+        <scene sceneID="L3R-ew-G0T">
+            <objects>
+                <collectionViewController id="9nT-Yb-s42" customClass="BookCVC" customModule="day9" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="v9H-Cx-oHx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.25792146631980128" green="0.41987127590673579" blue="0.321071557365813" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uBb-Re-k4Z">
+                            <size key="itemSize" width="101" height="101"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="myCell" reuseIdentifier="myCell" id="JA2-Jo-MtZ" customClass="BooksCell" customModule="day9" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-BH-ngq">
+                                            <rect key="frame" x="16" y="11" width="65" height="53"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-ri-wbD">
+                                            <rect key="frame" x="29" y="80" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <connections>
+                                    <outlet property="imgBook" destination="Xjq-BH-ngq" id="cuQ-fc-MkV"/>
+                                    <outlet property="lblBookName" destination="VV2-ri-wbD" id="wfP-1N-iR6"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="9nT-Yb-s42" id="xrg-px-geM"/>
+                            <outlet property="delegate" destination="9nT-Yb-s42" id="rYT-tg-zFj"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Book" image="Books.png" id="o8Q-HB-l9T"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iep-zo-qay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="-615"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iwX-VW-UGM">
+            <objects>
+                <tabBarController id="Tp3-Q7-5aW" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Uk-vr-n9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.30769327585113315" green="0.4239192033678757" blue="0.38784299446066317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9nT-Yb-s42" kind="relationship" relationship="viewControllers" id="L4P-Iw-9JW"/>
+                        <segue destination="5bQ-bP-3PH" kind="relationship" relationship="viewControllers" id="edY-UM-vVw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSf-ul-85N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1217" y="-278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Books.png" width="25" height="25"/>
+        <image name="Video.png" width="25" height="25"/>
+    </resources>
+</document>
